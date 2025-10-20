@@ -1,93 +1,90 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #89f7fe, #66a6ff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #b2fefa, #0ed2f7);
   height: 100vh;
-}
-
-.container {
-  text-align: center;
-  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 h1 {
+  color: #034078;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   margin-bottom: 20px;
-  color: #003366;
 }
 
-.card {
-  border: 2px solid black; 
-  padding: 20px; /* Adds space between content and border */
-  width: 420px;
-  height: 300px;
+.flashcard {
+  width: 500px;
+  height: 330px;
   perspective: 1000px;
-  margin: 0 auto;
-}
-
-.card-inner {
-  width: 100%;
-  height: 100%;
   position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.7s;
+  cursor: pointer;
 }
 
-.card.flipped .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
+.flashcard .front, .flashcard .back {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 15px;
-  background: white;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  padding: 20px;
-  box-sizing: border-box;
+  transition: transform 0.6s;
   overflow-y: auto;
 }
 
-.card-back {
+.flashcard .back {
   transform: rotateY(180deg);
+}
+
+.flashcard.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.flashcard.flipped .back {
+  transform: rotateY(0deg);
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
 }
 
-th, td {
-  border: 1px solid #ddd;
+td {
   padding: 6px;
-  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
-th {
-  background-color: #f0f0f0;
+td:first-child {
+  color: red;
 }
 
-.controls {
-  margin-top: 20px;
+td:nth-child(2) {
+  color: green;
+  font-weight: bold;
 }
 
 button {
-  background: #0066cc;
+  background: #034078;
   color: white;
   border: none;
   padding: 10px 20px;
-  margin: 0 8px;
-  border-radius: 6px;
+  border-radius: 8px;
+  margin: 10px;
   cursor: pointer;
+  font-size: 16px;
   transition: background 0.3s;
 }
 
 button:hover {
-  background: #004d99;
+  background: #0466c8;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

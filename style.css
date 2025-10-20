@@ -20,6 +20,8 @@ h1 {
 }
 
 .card {
+  border: 2px solid black; 
+  padding: 20px; /* Adds space between content and border */
   width: 420px;
   height: 300px;
   perspective: 1000px;

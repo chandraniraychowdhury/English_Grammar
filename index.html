@@ -3,49 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TOEFL Grammar Flashcards</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .card {
-      background: white;
-      width: 350px;
-      height: 200px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .card:hover { transform: scale(1.03); }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover { background: #0056b3; }
-  </style>
+  <title>Grammar Flashcards - Articles</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card" id="flashcard">Click to flip</div>
-  <button onclick="nextCard()">Next</button>
+  <div class="container">
+    <h1>TOEFL Grammar Flashcards: The Definite Article “The”</h1>
+    
+    <div class="card" id="card">
+      <div class="card-inner" id="card-inner">
+        <div class="card-front" id="card-front"></div>
+        <div class="card-back" id="card-back"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="prevCard()">⬅ Previous</button>
+      <button onclick="flipCard()">🔁 Flip</button>
+      <button onclick="nextCard()">Next ➡</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

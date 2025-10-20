@@ -1,93 +1,90 @@
 const flashcards = [
   {
-    title: "Before general, plural, or uncountable nouns",
-    table: `
-      <table>
-        <tr><th>❌ Incorrect</th><th>✅ Correct</th><th>Explanation</th></tr>
-        <tr><td>The cats are friendly animals.</td><td>Cats are friendly animals.</td><td>Talking about cats in general, not specific cats.</td></tr>
-        <tr><td>The milk is good for health.</td><td>Milk is good for health.</td><td>Milk = uncountable, general sense.</td></tr>
-        <tr><td>The honesty is important.</td><td>Honesty is important.</td><td>Honesty = abstract idea.</td></tr>
-      </table>
-      <p class="rule"><b>✅ Rule:</b> Don’t use <i>the</i> before nouns when you speak generally, not about a specific instance.</p>
-      <p class="exception"><b>⚠️ Exception:</b> Use <i>the</i> when referring to specific or previously mentioned nouns (e.g., <i>The cats next door are noisy</i>, <i>The milk in the fridge is spoiled</i>).</p>
-    `
+    title: "1️⃣ Before general, plural, or uncountable nouns",
+    examples: [
+      {
+        incorrect: "The cats are friendly animals.",
+        correct: "Cats are friendly animals.",
+        explanation: "Talking about cats in general, not specific cats."
+      },
+      {
+        incorrect: "The milk is good for health.",
+        correct: "Milk is good for health.",
+        explanation: "Milk = uncountable, general sense."
+      },
+      {
+        incorrect: "The honesty is important.",
+        correct: "Honesty is important.",
+        explanation: "Honesty = abstract idea."
+      }
+    ],
+    rule: "✅ Rule: Don’t use 'the' before nouns when you speak generally, not about a specific instance.",
+    exception: "⚠️ Exception: Use 'the' with plural country names, groups of islands, mountain ranges, and rivers — e.g., the Netherlands, the Philippines, the Himalayas, the Nile."
   },
   {
-    title: "Before most proper nouns",
-    table: `
-      <table>
-        <tr><th>❌ Incorrect</th><th>✅ Correct</th><th>Explanation</th></tr>
-        <tr><td>The India is a big country.</td><td>India is a big country.</td><td>Countries usually don’t take <i>the</i>.</td></tr>
-        <tr><td>The Mount Everest is high.</td><td>Mount Everest is high.</td><td>Names of mountains don’t take <i>the</i>.</td></tr>
-        <tr><td>The Shakespeare wrote plays.</td><td>Shakespeare wrote plays.</td><td>Names of people don’t take <i>the</i>.</td></tr>
-      </table>
-      <p class="rule"><b>✅ Rule:</b> Don’t use <i>the</i> before most names of people, countries, and cities.</p>
-      <p class="exception"><b>⚠️ Exception:</b> Use <i>the</i> with plural or descriptive country names and geographical groups (e.g., <i>the Netherlands</i>, <i>the Philippines</i>, <i>the United States</i>, <i>the Himalayas</i>).</p>
-    `
+    title: "2️⃣ Before languages and academic subjects",
+    examples: [
+      {
+        incorrect: "The English is difficult.",
+        correct: "English is difficult.",
+        explanation: "Language names are used without 'the'."
+      },
+      {
+        incorrect: "The mathematics is interesting.",
+        correct: "Mathematics is interesting.",
+        explanation: "Academic subjects don’t take 'the'."
+      }
+    ],
+    rule: "✅ Rule: Don’t use 'the' before languages or academic subjects.",
+    exception: "⚠️ Exception: Use 'the' when specifying a particular branch or form, e.g., 'the English spoken in Canada' or 'the mathematics of chaos theory'."
   },
   {
-    title: "Before languages and subjects",
-    table: `
-      <table>
-        <tr><th>❌ Incorrect</th><th>✅ Correct</th><th>Explanation</th></tr>
-        <tr><td>The English is difficult.</td><td>English is difficult.</td><td>Languages don’t take <i>the</i>.</td></tr>
-        <tr><td>The mathematics is interesting.</td><td>Mathematics is interesting.</td><td>Subjects are used without <i>the</i>.</td></tr>
-      </table>
-      <p class="rule"><b>✅ Rule:</b> Don’t use <i>the</i> before names of languages or academic subjects.</p>
-      <p class="exception"><b>⚠️ Exception:</b> Use <i>the</i> when referring to a specific type or branch (e.g., <i>The English of Shakespeare’s time was different</i>, <i>The mathematics of chaos theory is complex</i>).</p>
-    `
-  },
-  {
-    title: "Before meals, days, and holidays",
-    table: `
-      <table>
-        <tr><th>❌ Incorrect</th><th>✅ Correct</th><th>Explanation</th></tr>
-        <tr><td>The breakfast was delicious.</td><td>Breakfast was delicious.</td><td>Meals in general don’t take <i>the</i>.</td></tr>
-        <tr><td>I will meet you on the Monday.</td><td>I will meet you on Monday.</td><td>Days don’t take <i>the</i>.</td></tr>
-        <tr><td>The Christmas is my favorite holiday.</td><td>Christmas is my favorite holiday.</td><td>Holidays don’t take <i>the</i>.</td></tr>
-      </table>
-      <p class="rule"><b>✅ Rule:</b> Omit <i>the</i> with meals, days, and holidays when used generally.</p>
-      <p class="exception"><b>⚠️ Exception:</b> Use <i>the</i> when specifying (e.g., <i>The breakfast at the hotel was delicious</i>, <i>The Monday after the exam was hectic</i>).</p>
-    `
-  },
-  {
-    title: "Before transport with ‘by’",
-    table: `
-      <table>
-        <tr><th>❌ Incorrect</th><th>✅ Correct</th><th>Explanation</th></tr>
-        <tr><td>I go to school by the bus.</td><td>I go to school by bus.</td><td>‘By’ removes the article.</td></tr>
-        <tr><td>She came by the train.</td><td>She came by train.</td><td>General transport form uses no <i>the</i>.</td></tr>
-      </table>
-      <p class="rule"><b>✅ Rule:</b> Don’t use <i>the</i> after <i>by</i> when talking about transport in general.</p>
-      <p class="exception"><b>⚠️ Exception:</b> Use <i>the</i> when referring to a specific vehicle (e.g., <i>I missed the bus to Delhi</i>, <i>The train we took was late</i>).</p>
-    `
+    title: "3️⃣ Before meals, months, and days",
+    examples: [
+      {
+        incorrect: "I’ll see you on the Monday.",
+        correct: "I’ll see you on Monday.",
+        explanation: "Days and months are used without 'the'."
+      },
+      {
+        incorrect: "The breakfast was delicious.",
+        correct: "Breakfast was delicious.",
+        explanation: "Meals are used generally without 'the'."
+      }
+    ],
+    rule: "✅ Rule: Don’t use 'the' before meals, months, or days when speaking generally.",
+    exception: "⚠️ Exception: Use 'the' when referring to a specific meal or day, e.g., 'the breakfast we had at the hotel' or 'the Monday after Diwali'."
   }
 ];
 
 let current = 0;
-const card = document.getElementById("card");
-const front = document.getElementById("card-front");
-const back = document.getElementById("card-back");
 
-function showCard() {
-  front.innerHTML = `<h2>${flashcards[current].title}</h2>`;
-  back.innerHTML = flashcards[current].table;
+function loadFlashcard(index) {
+  const card = flashcards[index];
+  document.getElementById("ruleTitle").innerText = card.title;
+
+  const tbody = document.getElementById("examples");
+  tbody.innerHTML = card.examples
+    .map(ex => `
+      <tr>
+        <td>${ex.incorrect}</td>
+        <td>${ex.correct}</td>
+        <td>${ex.explanation}</td>
+      </tr>
+    `).join("");
+
+  document.getElementById("ruleText").innerText = card.rule;
+  document.getElementById("exceptionText").innerText = card.exception;
 }
 
-function flipCard() {
-  card.classList.toggle("flipped");
-}
-
-function nextCard() {
-  current = (current + 1) % flashcards.length;
-  card.classList.remove("flipped");
-  showCard();
-}
-
-function prevCard() {
+document.getElementById("prevBtn").addEventListener("click", () => {
   current = (current - 1 + flashcards.length) % flashcards.length;
-  card.classList.remove("flipped");
-  showCard();
-}
+  loadFlashcard(current);
+});
 
-showCard();
+document.getElementById("nextBtn").addEventListener("click", () => {
+  current = (current + 1) % flashcards.length;
+  loadFlashcard(current);
+});
+
+loadFlashcard(current);

@@ -3,20 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Definite Article "The" not Used</title>
+  <title>Definite Article Flashcards</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>"The" not used</h1>
-  <div class="flashcard" id="card">
-    <div class="front"></div>
-    <div class="back"></div>
+  <h1>Grammar Flashcards: When Not to Use <em>the</em></h1>
+
+  <div class="flashcard" id="flashcard">
+    <div class="front">
+      <h2 id="ruleTitle"></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>❌ Incorrect</th>
+            <th>✅ Correct</th>
+            <th>Explanation</th>
+          </tr>
+        </thead>
+        <tbody id="examples"></tbody>
+      </table>
+      <p class="rule" id="ruleText"></p>
+      <p class="exception" id="exceptionText"></p>
+    </div>
   </div>
+
   <div class="buttons">
-    <button onclick="prevCard()">Previous</button>
-    <button onclick="flipCard()">Flip</button>
-    <button onclick="nextCard()">Next</button>
+    <button id="prevBtn">Previous</button>
+    <button id="nextBtn">Next</button>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

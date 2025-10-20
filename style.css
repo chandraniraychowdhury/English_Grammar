@@ -1,26 +1,29 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #b3e5fc, #81d4fa);
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #a5d6a7, #81c784);
   color: #333;
   text-align: center;
   padding: 30px;
 }
 
 h1 {
-  color: #01579b;
+  color: #1b5e20;
   margin-bottom: 25px;
 }
 
 .flashcard {
   background: #fff;
   width: 90%;
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto;
   padding: 25px;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.5s ease;
+}
+
+.flashcard:hover {
+  transform: rotateY(2deg) scale(1.01);
 }
 
 table {
@@ -30,7 +33,7 @@ table {
 }
 
 th {
-  background-color: #0288d1;
+  background-color: #2e7d32;
   color: white;
   padding: 10px;
 }
@@ -38,19 +41,19 @@ th {
 td {
   border: 1px solid #ccc;
   padding: 10px;
+  vertical-align: top;
 }
 
 .rule {
   font-weight: bold;
-  color: #006064;
+  color: #004d40;
   margin-top: 15px;
 }
 
 .exception {
-  background: #e0f7fa;
-  border-left: 4px solid #0097a7;
-  padding: 10px;
-  margin-top: 10px;
+  background: #e8f5e9;
+  border-left: 5px solid #2e7d32;
+  padding: 12px;
   border-radius: 6px;
   text-align: left;
 }
@@ -60,7 +63,7 @@ td {
 }
 
 button {
-  background-color: #0288d1;
+  background-color: #388e3c;
   color: white;
   border: none;
   padding: 12px 22px;
@@ -72,5 +75,5 @@ button {
 }
 
 button:hover {
-  background-color: #0277bd;
+  background-color: #2e7d32;
 }
